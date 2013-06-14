@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/CreateMedicalRecord/CreateMedicalRecord?wsdl" uri="src/conf/xml-resources/web-service-references/CreateMedicalRecord/wsdl/localhost_8080/CreateMedicalRecord/CreateMedicalRecord.wsdl"/>
+    <system systemId="http://localhost:8080/CreateMedicalRecord/CreateMedicalRecord?xsd=1" uri="src/conf/xml-resources/web-service-references/CreateMedicalRecord/wsdl/localhost_8080/CreateMedicalRecord/CreateMedicalRecord.xsd_1"/>
+    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl" uri="wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
+    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1" uri="wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?wsdl" uri="wsdl/localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.wsdl"/>
+    <system systemId="http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?xsd=1" uri="wsdl/localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.xsd_1.xsd"/>
+</catalog>
