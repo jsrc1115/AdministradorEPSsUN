@@ -52,7 +52,7 @@ public class CRUD_EPS_ws {
     }
     
     @WebMethod(operationName = "changeEPS")
-    public void changeEPS(int idRecord, @WebParam(name = "fromEPS") EPS from, @WebParam(name = "toEPS") EPS to)
+    public void changeEPS(@WebParam(name = "idRecord") int idRecord, @WebParam(name = "fromEPS") EPS from, @WebParam(name = "toEPS") EPS to)
     {
         new MedicalRecordCRUDUrl().changeEPS(idRecord,from,to);
     }
