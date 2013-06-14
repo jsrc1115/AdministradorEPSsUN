@@ -5,10 +5,12 @@
 package services;
 
 import controller.CRUD_EPS;
+import controller.MedicalRecordCRUDUrl;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.ejb.Stateless;
+import javax.jws.WebParam;
 import model.EPS;
 
 /**
@@ -20,13 +22,13 @@ import model.EPS;
 public class CRUD_EPS_ws {
     
     @WebMethod(operationName = "createEPS")
-    public void createEPS(int id, String name, String urlRecord, String urlAppointment)
+    public void createEPS(@WebParam(name = "idEPS") int id, @WebParam(name = "nombreEPS") String name, @WebParam(name = "urlMedicalRecord") String urlRecord, @WebParam(name = "urlAppointment") String urlAppointment)
     {        
         new CRUD_EPS().create(id, name, urlRecord, urlAppointment);
     }
     
     @WebMethod(operationName = "readOneEPS")
-    public EPS readByID(int id)
+    public EPS readByID(@WebParam(name = "idEPS") int id)
     {        
         return new CRUD_EPS().readByID(new Integer(id));
     }
@@ -38,21 +40,21 @@ public class CRUD_EPS_ws {
     }
     
     @WebMethod(operationName = "updateEPS")
-    public void updateEPS(int id, String name, String urlRecord, String urlAppointment)
+    public void updateEPS(@WebParam(name = "idEPS") int id, @WebParam(name = "nombreEPS") String name, @WebParam(name = "urlMedicalRecord") String urlRecord, @WebParam(name = "urlAppointment") String urlAppointment)
     {        
         new CRUD_EPS().update(id, name, urlRecord, urlAppointment);
     }
     
     @WebMethod(operationName = "deleteEPS")
-    public void deleteID(int id)
+    public void deleteID(@WebParam(name = "idEPS") int id)
     {        
         new CRUD_EPS().delete(new Integer(id));
     }
     
     @WebMethod(operationName = "changeEPS")
-    public void changeEPS(int id, EPS from, EPS to)
+    public void changeEPS(int idRecord, @WebParam(name = "fromEPS") EPS from, @WebParam(name = "toEPS") EPS to)
     {
-        //new MedicalRecordAccess().changeEPS(id,from,to);
+        new MedicalRecordCRUDUrl().changeEPS(idRecord,from,to);
     }
     
 }

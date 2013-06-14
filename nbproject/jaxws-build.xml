@@ -49,23 +49,6 @@
             <classpath path="${j2ee.platform.wsimport.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsimport-client-MedicalRecordCRUDWS" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS"/>
-        <property name="wsdl-MedicalRecordCRUDWS" location="${meta.inf}/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS" destdir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS" wsdl="${wsdl-MedicalRecordCRUDWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-MedicalRecordCRUDWS}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-MedicalRecordCRUDWS" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/fachadews"/>
-    </target>
     <target name="wsimport-client-AppointmentCRUDWS" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/AppointmentCRUDWS"/>
         <property name="wsdl-AppointmentCRUDWS" location="${meta.inf}/xml-resources/web-service-references/AppointmentCRUDWS/wsdl/localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.wsdl"/>
@@ -83,5 +66,22 @@
         <delete dir="${build.generated.dir}/jax-wsCache/AppointmentCRUDWS"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/fachadews"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-MedicalRecordCRUDWS, wsimport-client-AppointmentCRUDWS"/>
+    <target name="wsimport-client-MedicalRecordCRUDWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS"/>
+        <property name="wsdl-MedicalRecordCRUDWS" location="${meta.inf}/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS" destdir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS" wsdl="${wsdl-MedicalRecordCRUDWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-MedicalRecordCRUDWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MedicalRecordCRUDWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/MedicalRecordCRUDWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/fachadews"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-AppointmentCRUDWS, wsimport-client-MedicalRecordCRUDWS"/>
 </project>

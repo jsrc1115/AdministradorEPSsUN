@@ -21,19 +21,21 @@ import model.EPS;
 @Stateless()
 public class AppointmentCRUDUrlWS {
 
-    public void addAppointment(int idRecord, Appointment appointment, int idEPS)
+    @WebMethod(operationName = "addAppoinment")
+    public void addAppointment(@WebParam(name = "idRecord") int idRecord, @WebParam(name = "appointment") Appointment appointment, @WebParam(name = "idEPS") int idEPS)
     {
         EPS eps = new CRUD_EPS().readByID(idEPS);
         new AppointmentCRUDUrl().addAppointment(idRecord, appointment, eps.getUrlAppointments());
     }
     
-    public void deleteAppointment(int idRecord,int idAppointment, int idEPS)
+    @WebMethod(operationName = "deleteAppoinment")
+    public void deleteAppointment(@WebParam(name = "idRecord") int idRecord,@WebParam(name = "idAppointment") int idAppointment, @WebParam(name = "idEPS") int idEPS)
     {
         EPS eps = new CRUD_EPS().readByID(idEPS);
         new AppointmentCRUDUrl().deleteAppointment(idRecord, idAppointment, eps.getUrlAppointments());
     }
-    
-    public void getAppointment(int idRecord,int idAppointment, int idEPS)
+    @WebMethod(operationName = "getAppointment")
+    public void getAppointment(@WebParam(name = "idRecord") int idRecord,@WebParam(name = "idAppointment") int idAppointment, @WebParam(name = "idEPS") int idEPS)
     {
         EPS eps = new CRUD_EPS().readByID(idEPS);
         new AppointmentCRUDUrl().getAppointment(idRecord, idAppointment, eps.getUrlAppointments());

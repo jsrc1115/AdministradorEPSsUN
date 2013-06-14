@@ -4,11 +4,11 @@
 <xsd:import namespace="http://fachadews/" schemaLocation="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="DeleteMR">
-<part name="parameters" element="tns:DeleteMR"/>
+<message name="SetMR">
+<part name="parameters" element="tns:SetMR"/>
 </message>
-<message name="DeleteMRResponse">
-<part name="parameters" element="tns:DeleteMRResponse"/>
+<message name="SetMRResponse">
+<part name="parameters" element="tns:SetMRResponse"/>
 </message>
 <message name="GetMR">
 <part name="parameters" element="tns:GetMR"/>
@@ -16,49 +16,49 @@
 <message name="GetMRResponse">
 <part name="parameters" element="tns:GetMRResponse"/>
 </message>
-<message name="CreateMedRList">
-<part name="parameters" element="tns:CreateMedRList"/>
-</message>
-<message name="CreateMedRListResponse">
-<part name="parameters" element="tns:CreateMedRListResponse"/>
-</message>
 <message name="CreateMedRId">
 <part name="parameters" element="tns:CreateMedRId"/>
 </message>
 <message name="CreateMedRIdResponse">
 <part name="parameters" element="tns:CreateMedRIdResponse"/>
 </message>
-<message name="SetMR">
-<part name="parameters" element="tns:SetMR"/>
+<message name="DeleteMR">
+<part name="parameters" element="tns:DeleteMR"/>
 </message>
-<message name="SetMRResponse">
-<part name="parameters" element="tns:SetMRResponse"/>
+<message name="DeleteMRResponse">
+<part name="parameters" element="tns:DeleteMRResponse"/>
+</message>
+<message name="CreateMedRList">
+<part name="parameters" element="tns:CreateMedRList"/>
+</message>
+<message name="CreateMedRListResponse">
+<part name="parameters" element="tns:CreateMedRListResponse"/>
 </message>
 <portType name="MedicalRecordCRUDWS">
-<operation name="DeleteMR">
-<input wsam:Action="http://fachadews/MedicalRecordCRUDWS/DeleteMRRequest" message="tns:DeleteMR"/>
-<output wsam:Action="http://fachadews/MedicalRecordCRUDWS/DeleteMRResponse" message="tns:DeleteMRResponse"/>
+<operation name="SetMR">
+<input wsam:Action="http://fachadews/MedicalRecordCRUDWS/SetMRRequest" message="tns:SetMR"/>
+<output wsam:Action="http://fachadews/MedicalRecordCRUDWS/SetMRResponse" message="tns:SetMRResponse"/>
 </operation>
 <operation name="GetMR">
 <input wsam:Action="http://fachadews/MedicalRecordCRUDWS/GetMRRequest" message="tns:GetMR"/>
 <output wsam:Action="http://fachadews/MedicalRecordCRUDWS/GetMRResponse" message="tns:GetMRResponse"/>
 </operation>
-<operation name="CreateMedRList">
-<input wsam:Action="http://fachadews/MedicalRecordCRUDWS/CreateMedRListRequest" message="tns:CreateMedRList"/>
-<output wsam:Action="http://fachadews/MedicalRecordCRUDWS/CreateMedRListResponse" message="tns:CreateMedRListResponse"/>
-</operation>
 <operation name="CreateMedRId">
 <input wsam:Action="http://fachadews/MedicalRecordCRUDWS/CreateMedRIdRequest" message="tns:CreateMedRId"/>
 <output wsam:Action="http://fachadews/MedicalRecordCRUDWS/CreateMedRIdResponse" message="tns:CreateMedRIdResponse"/>
 </operation>
-<operation name="SetMR">
-<input wsam:Action="http://fachadews/MedicalRecordCRUDWS/SetMRRequest" message="tns:SetMR"/>
-<output wsam:Action="http://fachadews/MedicalRecordCRUDWS/SetMRResponse" message="tns:SetMRResponse"/>
+<operation name="DeleteMR">
+<input wsam:Action="http://fachadews/MedicalRecordCRUDWS/DeleteMRRequest" message="tns:DeleteMR"/>
+<output wsam:Action="http://fachadews/MedicalRecordCRUDWS/DeleteMRResponse" message="tns:DeleteMRResponse"/>
+</operation>
+<operation name="CreateMedRList">
+<input wsam:Action="http://fachadews/MedicalRecordCRUDWS/CreateMedRListRequest" message="tns:CreateMedRList"/>
+<output wsam:Action="http://fachadews/MedicalRecordCRUDWS/CreateMedRListResponse" message="tns:CreateMedRListResponse"/>
 </operation>
 </portType>
 <binding name="MedicalRecordCRUDWSPortBinding" type="tns:MedicalRecordCRUDWS">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="DeleteMR">
+<operation name="SetMR">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -76,15 +76,6 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="CreateMedRList">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="CreateMedRId">
 <soap:operation soapAction=""/>
 <input>
@@ -94,7 +85,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="SetMR">
+<operation name="DeleteMR">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="CreateMedRList">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://fachadews/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://fachadews/">
 
-<xs:element name="CreateMedRId" nillable="true" type="tns:CreateMedRList"/>
+<xs:element name="CreateMedRId" type="tns:CreateMedRId"/>
 
-<xs:element name="CreateMedRIdResponse" nillable="true" type="tns:CreateMedRListResponse"/>
+<xs:element name="CreateMedRIdResponse" type="tns:CreateMedRIdResponse"/>
 
 <xs:element name="CreateMedRList" type="tns:CreateMedRList"/>
 
@@ -19,6 +19,35 @@
 <xs:element name="SetMR" type="tns:SetMR"/>
 
 <xs:element name="SetMRResponse" type="tns:SetMRResponse"/>
+
+<xs:complexType name="CreateMedRList">
+<xs:sequence>
+<xs:element name="idPerson" type="xs:int" minOccurs="0"/>
+<xs:element name="list" type="tns:appointment" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="appointment">
+<xs:sequence>
+<xs:element name="cost" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="tns:objectId" minOccurs="0"/>
+<xs:element name="idAppointment" type="xs:int"/>
+<xs:element name="idPerson" type="xs:int"/>
+<xs:element name="notes" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="tns:appointmentStatus" minOccurs="0"/>
+<xs:element name="time" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objectId">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="CreateMedRListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:processResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
 
 <xs:complexType name="DeleteMR">
 <xs:sequence>
@@ -51,22 +80,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="appointment">
-<xs:sequence>
-<xs:element name="cost" type="xs:string" minOccurs="0"/>
-<xs:element name="id" type="tns:objectId" minOccurs="0"/>
-<xs:element name="idAppointment" type="xs:int"/>
-<xs:element name="idPerson" type="xs:int"/>
-<xs:element name="notes" type="xs:string" minOccurs="0"/>
-<xs:element name="status" type="tns:appointmentStatus" minOccurs="0"/>
-<xs:element name="time" type="xs:dateTime" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="objectId">
-<xs:sequence/>
-</xs:complexType>
-
 <xs:complexType name="SetMR">
 <xs:sequence>
 <xs:element name="arg0" type="tns:medicalRecord" minOccurs="0"/>
@@ -77,31 +90,30 @@
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="CreateMedRList">
+<xs:complexType name="CreateMedRId">
 <xs:sequence>
 <xs:element name="idPerson" type="xs:int" minOccurs="0"/>
-<xs:element name="list" type="tns:appointment" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="CreateMedRListResponse">
+<xs:complexType name="CreateMedRIdResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:processResult" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
-
-<xs:simpleType name="processResult">
-<xs:restriction base="xs:string">
-<xs:enumeration value="ERROR"/>
-<xs:enumeration value="COMPLETED"/>
-</xs:restriction>
-</xs:simpleType>
 
 <xs:simpleType name="appointmentStatus">
 <xs:restriction base="xs:string">
 <xs:enumeration value="COMPLETED"/>
 <xs:enumeration value="ASSIGNED"/>
 <xs:enumeration value="CANCELLED"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="processResult">
+<xs:restriction base="xs:string">
+<xs:enumeration value="ERROR"/>
+<xs:enumeration value="COMPLETED"/>
 </xs:restriction>
 </xs:simpleType>
 </xs:schema>

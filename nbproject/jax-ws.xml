@@ -12,34 +12,6 @@
     </service>
   </services>
   <clients>
-    <client name="MedicalRecordCRUDWS">
-      <wsdl-url>http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl</local-wsdl-file>
-      <package-name>fachadews</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
     <client name="AppointmentCRUDWS">
       <wsdl-url>http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?wsdl</wsdl-url>
       <local-wsdl-file>localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.wsdl</local-wsdl-file>
@@ -57,6 +29,34 @@
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
           <wsimport-option-value>http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="MedicalRecordCRUDWS">
+      <wsdl-url>http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl</local-wsdl-file>
+      <package-name>fachadews</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
