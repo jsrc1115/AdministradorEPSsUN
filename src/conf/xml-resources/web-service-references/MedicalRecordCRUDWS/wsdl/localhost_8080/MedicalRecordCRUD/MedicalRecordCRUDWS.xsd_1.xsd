@@ -1,12 +1,12 @@
-<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://fachadews/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://fachadews/">
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://fachadews/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://fachadews/">
 
-<xs:element name="CreateMedRId" type="tns:CreateMedRId"/>
+<xs:element name="CreateMRId" type="tns:CreateMRId"/>
 
-<xs:element name="CreateMedRIdResponse" type="tns:CreateMedRIdResponse"/>
+<xs:element name="CreateMRIdResponse" type="tns:CreateMRIdResponse"/>
 
-<xs:element name="CreateMedRList" type="tns:CreateMedRList"/>
+<xs:element name="CreateMRList" type="tns:CreateMRList"/>
 
-<xs:element name="CreateMedRListResponse" type="tns:CreateMedRListResponse"/>
+<xs:element name="CreateMRListResponse" type="tns:CreateMRListResponse"/>
 
 <xs:element name="DeleteMR" type="tns:DeleteMR"/>
 
@@ -16,14 +16,18 @@
 
 <xs:element name="GetMRResponse" type="tns:GetMRResponse"/>
 
+<xs:element name="ReadAllMR" type="tns:ReadAllMR"/>
+
+<xs:element name="ReadAllMRResponse" type="tns:ReadAllMRResponse"/>
+
 <xs:element name="SetMR" type="tns:SetMR"/>
 
 <xs:element name="SetMRResponse" type="tns:SetMRResponse"/>
 
-<xs:complexType name="CreateMedRList">
+<xs:complexType name="CreateMRList">
 <xs:sequence>
-<xs:element name="idPerson" type="xs:int" minOccurs="0"/>
-<xs:element name="list" type="tns:appointment" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="arg0" type="xs:int" minOccurs="0"/>
+<xs:element name="arg1" type="tns:appointment" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -43,7 +47,7 @@
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="CreateMedRListResponse">
+<xs:complexType name="CreateMRListResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:processResult" minOccurs="0"/>
 </xs:sequence>
@@ -90,13 +94,25 @@
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="CreateMedRId">
+<xs:complexType name="ReadAllMR">
 <xs:sequence>
-<xs:element name="idPerson" type="xs:int" minOccurs="0"/>
+<xs:element name="arg0" type="xs:int" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="CreateMedRIdResponse">
+<xs:complexType name="ReadAllMRResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:medicalRecord" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CreateMRId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CreateMRIdResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:processResult" minOccurs="0"/>
 </xs:sequence>

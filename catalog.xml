@@ -2,8 +2,12 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/CreateMedicalRecord/CreateMedicalRecord?wsdl" uri="src/conf/xml-resources/web-service-references/CreateMedicalRecord/wsdl/localhost_8080/CreateMedicalRecord/CreateMedicalRecord.wsdl"/>
     <system systemId="http://localhost:8080/CreateMedicalRecord/CreateMedicalRecord?xsd=1" uri="src/conf/xml-resources/web-service-references/CreateMedicalRecord/wsdl/localhost_8080/CreateMedicalRecord/CreateMedicalRecord.xsd_1"/>
+    <system systemId="http://192.168.0.4:8080/AppointmentCRUDWS/AppointmentCRUDWS?WSDL" uri="src/conf/xml-resources/web-service-references/AppointmentCRUDWS/wsdl/192.168.0.4_8080/AppointmentCRUDWS/AppointmentCRUDWS.wsdl"/>
+    <system systemId="http://192.168.0.4:8080/AppointmentCRUDWS/AppointmentCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/AppointmentCRUDWS/wsdl/192.168.0.4_8080/AppointmentCRUDWS/AppointmentCRUDWS.xsd_1.xsd"/>
+    <system systemId="http://192.168.0.4:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?WSDL" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/192.168.0.4_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
+    <system systemId="http://192.168.0.4:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/192.168.0.4_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?wsdl" uri="src/conf/xml-resources/web-service-references/AppointmentCRUDWS/wsdl/localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.wsdl"/>
     <system systemId="http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/AppointmentCRUDWS/wsdl/localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.xsd_1.xsd"/>
-    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
-    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS_1/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
+    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS_1/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.xsd_1.xsd"/>
 </catalog>
