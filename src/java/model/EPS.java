@@ -17,6 +17,7 @@ public class EPS {
     private String name;
     private String urlRecords;
     private String urlAppointments;
+    private Long idOPI;
 
     public EPS() {
     }
@@ -26,6 +27,14 @@ public class EPS {
         this.name = name;
         this.urlRecords = urlRecord;
         urlAppointments = urlAppointment;
+    }
+
+    public Long getIdOPI() {
+        return idOPI;
+    }
+
+    public void setIdOPI(Long idOPI) {
+        this.idOPI = idOPI;
     }
 
     public Integer getId() {

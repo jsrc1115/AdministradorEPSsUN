@@ -47,7 +47,7 @@ public class OPIaccess {
      */
     @WebMethod(operationName = "registerEPS")
     @Oneway
-    public void registerEPS(@WebParam(name = "name") String name, @WebParam(name = "password") Long accountNumber) {
+    public void registerEPS(@WebParam(name = "name") String name, @WebParam(name = "accountNumber") Long accountNumber) {
         new OPIaccessControl().regEPS(name, accountNumber);
     }
 
