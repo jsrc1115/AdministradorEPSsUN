@@ -25,7 +25,6 @@ public class MedicalRecordCRUDUrl {
         createMRList(personId, mr, to.getUrlRecords());
     }
 
-//wsdl = new URL("http://localhost:8080/CreateMedicalRecord/CreateMedicalRecord?WSDL");
     public fachadews.ProcessResult deleteMR(java.lang.Integer arg0, String url) {
         fachadews.MedicalRecordCRUDWS port = getPort(url);
         return port.deleteMR(arg0);
@@ -47,13 +46,6 @@ public class MedicalRecordCRUDUrl {
     }
 
     private fachadews.MedicalRecordCRUDWS getPort(String url) {
-//        URL wsdl = null;
-//        try {
-//             wsdl = new URL(url);
-//        } catch (MalformedURLException ex) {
-//            Logger.getLogger(MedicalRecordCRUDUrl.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        fachadews.MedicalRecordCRUD service = new fachadews.MedicalRecordCRUD(wsdl);
         fachadews.MedicalRecordCRUD service = new fachadews.MedicalRecordCRUD();
         fachadews.MedicalRecordCRUDWS port = service.getMedicalRecordCRUDWSPort();
 

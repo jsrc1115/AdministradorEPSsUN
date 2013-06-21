@@ -22,9 +22,9 @@ import model.EPS;
 public class CRUD_EPS_ws {
     
     @WebMethod(operationName = "createEPS")
-    public void createEPS(@WebParam(name = "idEPS") int id, @WebParam(name = "nombreEPS") String name, @WebParam(name = "urlMedicalRecord") String urlRecord, @WebParam(name = "urlAppointment") String urlAppointment)
+    public void createEPS(@WebParam(name = "idEPS") int id, @WebParam(name = "nombreEPS") String name, @WebParam(name = "IPandPort") String IP)
     {        
-        new CRUD_EPS().create(id, name, urlRecord, urlAppointment);
+        new CRUD_EPS().create(id, name, IP);
     }
     
     @WebMethod(operationName = "readOneEPS")

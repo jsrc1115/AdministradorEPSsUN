@@ -8,8 +8,10 @@ import fachadews.Appointment;
 import fachadews.ProcessResult;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.xml.ws.BindingProvider;
 
 /**
  *
@@ -34,14 +36,13 @@ public class AppointmentCRUDUrl {
     
     private fachadews.AppointmentCRUDWS getPort(String url)
     {
-        URL wsdl = null;
-        try {
-             wsdl = new URL(url);
-        } catch (MalformedURLException ex) {
-            Logger.getLogger(MedicalRecordCRUDUrl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        fachadews.AppointmentCRUDWS_Service service = new fachadews.AppointmentCRUDWS_Service(wsdl);
+        
+        fachadews.AppointmentCRUDWS_Service service = new fachadews.AppointmentCRUDWS_Service();
         fachadews.AppointmentCRUDWS port = service.getAppointmentCRUDWSPort();
+        
+        Map<String, Object> requestContext = ((BindingProvider) port).getRequestContext();
+        requestContext.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url);
+        
         return port;
     }
 }

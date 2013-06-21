@@ -10,4 +10,9 @@
     <system systemId="http://192.168.0.4:8080/AppointmentCRUDWS/AppointmentCRUDWS?xsd=1" uri="wsdl/192.168.0.4_8080/AppointmentCRUDWS/AppointmentCRUDWS.xsd_1.xsd"/>
     <system systemId="http://192.168.0.4:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?WSDL" uri="wsdl/192.168.0.4_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
     <system systemId="http://192.168.0.4:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1" uri="wsdl/192.168.0.4_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.xsd_1.xsd"/>
+    <system systemId="http://25.16.26.205:8080/PersonOpiWs/PersonOpiWs?wsdl" uri="wsdl/25.16.26.205_8080/PersonOpiWs/PersonOpiWs.wsdl"/>
+    <system systemId="http://25.16.26.205:8080/PersonOpiWs/PersonOpiWs?xsd=1" uri="wsdl/25.16.26.205_8080/PersonOpiWs/PersonOpiWs.xsd_1.xsd"/>
+    <system systemId="http://ap1:8080/Payment/Payment?Tester" uri="wsdl/ap1_8080/Payment/Payment.tester"/>
+    <system systemId="http://AP1:8080/Payment/Payment?wsdl" uri="wsdl/AP1_8080/Payment/Payment.wsdl"/>
+    <system systemId="http://AP1:8080/Payment/Payment?xsd=1" uri="wsdl/AP1_8080/Payment/Payment.xsd_1.xsd"/>
 </catalog>

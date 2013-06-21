@@ -14,12 +14,17 @@ import model.EPS;
  * @author Sebastian
  */
 public class CRUD_EPS {
-    public void create(Integer id, String name, String urlRecord,String urlAppointment)
+    
+    private String pre = "http://";
+    private String posRecord = "/MedicalRecordCRUD/MedicalRecordCRUDWS?WSDL";
+    private String posAppointment = "/AppointmentCRUDWS/AppointmentCRUDWS?WSDL";
+    
+    public void create(Integer id, String name, String IP)
     {
+        String urlRecord = pre+IP+posRecord;
+        String urlAppointment = pre+IP+posAppointment;
         EPS eps = new EPS(id, name, urlRecord,urlAppointment);
-        System.out.println(eps);
-        Key<EPS> key = SingleDAO.getInstance().getEpsDAO().save(eps);                
-        System.out.println(key);
+        SingleDAO.getInstance().getEpsDAO().save(eps);
     }
     public List<EPS> readAll()
     {

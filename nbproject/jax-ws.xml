@@ -4,42 +4,20 @@
     <service name="CRUD_EPS_ws">
       <implementation-class>services.CRUD_EPS_ws</implementation-class>
     </service>
-    <service name="AppointmentCRUDUrlWS">
-      <implementation-class>services.AppointmentCRUDUrlWS</implementation-class>
-    </service>
     <service name="MedicalRecordsCRUDUrlWS">
       <implementation-class>services.MedicalRecordsCRUDUrlWS</implementation-class>
     </service>
+    <service name="AppointmentCRUDUrlWS">
+      <implementation-class>services.AppointmentCRUDUrlWS</implementation-class>
+    </service>
+    <service name="OPIaccess">
+      <implementation-class>services.OPIaccess</implementation-class>
+    </service>
+    <service name="SRAaccess">
+      <implementation-class>services.SRAaccess</implementation-class>
+    </service>
   </services>
   <clients>
-    <client name="MedicalRecordCRUDWS">
-      <wsdl-url>http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl</local-wsdl-file>
-      <package-name>fachadews</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
     <client name="AppointmentCRUDWS">
       <wsdl-url>http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?wsdl</wsdl-url>
       <local-wsdl-file>localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.wsdl</local-wsdl-file>
@@ -68,7 +46,7 @@
         </wsimport-option>
       </wsimport-options>
     </client>
-    <client name="MedicalRecordCRUDWS_1">
+    <client name="MedicalRecordCRUDWS">
       <wsdl-url>http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl</wsdl-url>
       <local-wsdl-file>localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl</local-wsdl-file>
       <package-name>fachadews</package-name>
@@ -85,6 +63,34 @@
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
           <wsimport-option-value>http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="PersonOpiWs">
+      <wsdl-url>http://25.16.26.205:8080/PersonOpiWs/PersonOpiWs?wsdl</wsdl-url>
+      <local-wsdl-file>25.16.26.205_8080/PersonOpiWs/PersonOpiWs.wsdl</local-wsdl-file>
+      <package-name>com.dataejbopi.ws</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://25.16.26.205:8080/PersonOpiWs/PersonOpiWs?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

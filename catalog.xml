@@ -8,6 +8,11 @@
     <system systemId="http://192.168.0.4:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/192.168.0.4_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?wsdl" uri="src/conf/xml-resources/web-service-references/AppointmentCRUDWS/wsdl/localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.wsdl"/>
     <system systemId="http://localhost:8080/AppointmentCRUDWS/AppointmentCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/AppointmentCRUDWS/wsdl/localhost_8080/AppointmentCRUDWS/AppointmentCRUDWS.xsd_1.xsd"/>
-    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS_1/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
-    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS_1/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?wsdl" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl"/>
+    <system systemId="http://localhost:8080/MedicalRecordCRUD/MedicalRecordCRUDWS?xsd=1" uri="src/conf/xml-resources/web-service-references/MedicalRecordCRUDWS/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.xsd_1.xsd"/>
+    <system systemId="http://25.16.26.205:8080/PersonOpiWs/PersonOpiWs?wsdl" uri="src/conf/xml-resources/web-service-references/PersonOpiWs/wsdl/25.16.26.205_8080/PersonOpiWs/PersonOpiWs.wsdl"/>
+    <system systemId="http://25.16.26.205:8080/PersonOpiWs/PersonOpiWs?xsd=1" uri="src/conf/xml-resources/web-service-references/PersonOpiWs/wsdl/25.16.26.205_8080/PersonOpiWs/PersonOpiWs.xsd_1.xsd"/>
+    <system systemId="http://ap1:8080/Payment/Payment?Tester" uri="src/conf/xml-resources/web-service-references/Payment_Tester/wsdl/ap1_8080/Payment/Payment.tester"/>
+    <system systemId="http://AP1:8080/Payment/Payment?wsdl" uri="src/conf/xml-resources/web-service-references/Payment/wsdl/AP1_8080/Payment/Payment.wsdl"/>
+    <system systemId="http://AP1:8080/Payment/Payment?xsd=1" uri="src/conf/xml-resources/web-service-references/Payment/wsdl/AP1_8080/Payment/Payment.xsd_1.xsd"/>
 </catalog>
