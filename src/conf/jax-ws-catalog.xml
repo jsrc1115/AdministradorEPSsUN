@@ -15,4 +15,8 @@
     <system systemId="http://ap1:8080/Payment/Payment?Tester" uri="wsdl/ap1_8080/Payment/Payment.tester"/>
     <system systemId="http://AP1:8080/Payment/Payment?wsdl" uri="wsdl/AP1_8080/Payment/Payment.wsdl"/>
     <system systemId="http://AP1:8080/Payment/Payment?xsd=1" uri="wsdl/AP1_8080/Payment/Payment.xsd_1.xsd"/>
+    <system systemId="http://25.21.174.183:8080/CompanyPersonWs/CompanyPersonWs?wsdl" uri="wsdl/25.21.174.183_8080/CompanyPersonWs/CompanyPersonWs.wsdl"/>
+    <system systemId="http://25.21.174.183:8080/CompanyPersonWs/CompanyPersonWs?xsd=1" uri="wsdl/25.21.174.183_8080/CompanyPersonWs/CompanyPersonWs.xsd_1.xsd"/>
+    <system systemId="http://25.16.26.205:8080/EpsWs/EpsWs?wsdl" uri="wsdl/25.16.26.205_8080/EpsWs/EpsWs.wsdl"/>
+    <system systemId="http://25.16.26.205:8080/EpsWs/EpsWs?xsd=1" uri="wsdl/25.16.26.205_8080/EpsWs/EpsWs.xsd_1.xsd"/>
 </catalog>

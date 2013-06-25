@@ -17,16 +17,18 @@ public class EPS {
     private String name;
     private String urlRecords;
     private String urlAppointments;
+    private String urlFinancial;
     private Long idOPI;
 
     public EPS() {
     }
 
-    public EPS(Integer id, String name, String urlRecord, String urlAppointment) {
+    public EPS(Integer id, String name, String urlRecord, String urlAppointment,String urlFinancial) {
         this.id = id;
         this.name = name;
         this.urlRecords = urlRecord;
-        urlAppointments = urlAppointment;
+        this.urlAppointments = urlAppointment;
+        this.urlFinancial = urlFinancial;
     }
 
     public Long getIdOPI() {
@@ -68,7 +70,13 @@ public class EPS {
     public void setUrlAppointments(String urlAppointments) {
         this.urlAppointments = urlAppointments;
     }
-    
-    
+
+    public String getUrlFinancial() {
+        return urlFinancial;
+    }
+
+    public void setUrlFinancial(String urlFinancial) {
+        this.urlFinancial = urlFinancial;
+    }
     
 }

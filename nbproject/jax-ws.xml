@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="CRUD_EPS_ws">
-      <implementation-class>services.CRUD_EPS_ws</implementation-class>
-    </service>
-    <service name="MedicalRecordsCRUDUrlWS">
-      <implementation-class>services.MedicalRecordsCRUDUrlWS</implementation-class>
-    </service>
-    <service name="AppointmentCRUDUrlWS">
-      <implementation-class>services.AppointmentCRUDUrlWS</implementation-class>
+    <service name="SRAaccess">
+      <implementation-class>servicios.SRAaccess</implementation-class>
     </service>
     <service name="OPIaccess">
-      <implementation-class>services.OPIaccess</implementation-class>
+      <implementation-class>servicios.OPIaccess</implementation-class>
     </service>
-    <service name="SRAaccess">
-      <implementation-class>services.SRAaccess</implementation-class>
+    <service name="AdmEPSService">
+      <implementation-class>servicios.AdmEPSService</implementation-class>
     </service>
   </services>
   <clients>
@@ -91,6 +85,90 @@
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
           <wsimport-option-value>http://25.16.26.205:8080/PersonOpiWs/PersonOpiWs?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="CompanyWs">
+      <wsdl-url>http://25.21.174.183:8080/CompanyWs/CompanyWs?wsdl</wsdl-url>
+      <local-wsdl-file>25.21.174.183_8080/CompanyWs/CompanyWs.wsdl</local-wsdl-file>
+      <package-name>com.dataejbsra.ws</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://25.21.174.183:8080/CompanyWs/CompanyWs?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="CompanyPersonWs">
+      <wsdl-url>http://25.21.174.183:8080/CompanyPersonWs/CompanyPersonWs?wsdl</wsdl-url>
+      <local-wsdl-file>25.21.174.183_8080/CompanyPersonWs/CompanyPersonWs.wsdl</local-wsdl-file>
+      <package-name>com.dataejbsra.ws</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://25.21.174.183:8080/CompanyPersonWs/CompanyPersonWs?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="EpsWs">
+      <wsdl-url>http://25.16.26.205:8080/EpsWs/EpsWs?wsdl</wsdl-url>
+      <local-wsdl-file>25.16.26.205_8080/EpsWs/EpsWs.wsdl</local-wsdl-file>
+      <package-name>com.dataejbopi.ws</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://25.16.26.205:8080/EpsWs/EpsWs?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

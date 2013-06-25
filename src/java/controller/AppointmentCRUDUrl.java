@@ -6,11 +6,7 @@ package controller;
 
 import fachadews.Appointment;
 import fachadews.ProcessResult;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.ws.BindingProvider;
 
 /**

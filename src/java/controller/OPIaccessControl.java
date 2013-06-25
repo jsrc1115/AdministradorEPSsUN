@@ -29,12 +29,12 @@ public class OPIaccessControl {
     
     public ROb regEPS(String name, Long accountNumber)
     {
-        return new ROb();//TODO: 
+        return registerEps(name, accountNumber);
     }
     
     public ROb removeEPS(Long ID)
     {
-        return new ROb();//TODO: 
+        return removeById(ID);
     }
     
     private static ROb registerPerson(java.lang.Long cedule, java.lang.Double salary, java.lang.Long epsId) {
@@ -55,6 +55,18 @@ public class OPIaccessControl {
         requestContext.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, OPI_PERSON_URL);
         
         return port.removeByCedule(cedule);
+    }
+
+    private static ROb registerEps(java.lang.String name, java.lang.Long accountnumber) {
+        com.dataejbopi.ws.EpsWs_Service service = new com.dataejbopi.ws.EpsWs_Service();
+        com.dataejbopi.ws.EpsWs port = service.getEpsWsPort();
+        return port.registerEps(name, accountnumber);
+    }
+
+    private static ROb removeById(java.lang.Long id) {
+        com.dataejbopi.ws.EpsWs_Service service = new com.dataejbopi.ws.EpsWs_Service();
+        com.dataejbopi.ws.EpsWs port = service.getEpsWsPort();
+        return port.removeById(id);
     }
     
 }

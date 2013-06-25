@@ -15,4 +15,10 @@
     <system systemId="http://ap1:8080/Payment/Payment?Tester" uri="src/conf/xml-resources/web-service-references/Payment_Tester/wsdl/ap1_8080/Payment/Payment.tester"/>
     <system systemId="http://AP1:8080/Payment/Payment?wsdl" uri="src/conf/xml-resources/web-service-references/Payment/wsdl/AP1_8080/Payment/Payment.wsdl"/>
     <system systemId="http://AP1:8080/Payment/Payment?xsd=1" uri="src/conf/xml-resources/web-service-references/Payment/wsdl/AP1_8080/Payment/Payment.xsd_1.xsd"/>
+    <system systemId="http://25.21.174.183:8080/CompanyWs/CompanyWs?wsdl" uri="src/conf/xml-resources/web-service-references/CompanyWS/wsdl/25.21.174.183_8080/CompanyWs/CompanyWs.wsdl"/>
+    <system systemId="http://25.21.174.183:8080/CompanyWs/CompanyWs?xsd=1" uri="src/conf/xml-resources/web-service-references/CompanyWS/wsdl/25.21.174.183_8080/CompanyWs/CompanyWs.xsd_1.xsd"/>
+    <system systemId="http://25.21.174.183:8080/CompanyPersonWs/CompanyPersonWs?wsdl" uri="src/conf/xml-resources/web-service-references/CompanyPersonWs/wsdl/25.21.174.183_8080/CompanyPersonWs/CompanyPersonWs.wsdl"/>
+    <system systemId="http://25.21.174.183:8080/CompanyPersonWs/CompanyPersonWs?xsd=1" uri="src/conf/xml-resources/web-service-references/CompanyPersonWs/wsdl/25.21.174.183_8080/CompanyPersonWs/CompanyPersonWs.xsd_1.xsd"/>
+    <system systemId="http://25.16.26.205:8080/EpsWs/EpsWs?wsdl" uri="src/conf/xml-resources/web-service-references/EpsWs/wsdl/25.16.26.205_8080/EpsWs/EpsWs.wsdl"/>
+    <system systemId="http://25.16.26.205:8080/EpsWs/EpsWs?xsd=1" uri="src/conf/xml-resources/web-service-references/EpsWs/wsdl/25.16.26.205_8080/EpsWs/EpsWs.xsd_1.xsd"/>
 </catalog>
