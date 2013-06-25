@@ -96,32 +96,35 @@ public class AdmEPSService implements Serializable{
     //-----------------------------------------------
     //Medical Records
     //----------------------------------------------
-    @WebServiceRef(wsdlLocation = "META-INF/wsdl/localhost_8080/MedicalRecordCRUD/MedicalRecordCRUDWS.wsdl")
-    private MedicalRecordCRUD service;
 
+    @WebMethod(operationName = "createMedicalRecord")
     public void createMedicalRecord(@WebParam(name = "idRecord") int idMedicalRecord, @WebParam(name = "idEPS") int idEPS) {
         EPS eps = new CRUD_EPS().readByID(idEPS);
         new MedicalRecordCRUDUrl().createMRList(idMedicalRecord,new MedicalRecord(), eps.getUrlRecords());
     }
     
+    @WebMethod(operationName = "readMedicalRecord")
     public MedicalRecord readMedicalRecord(@WebParam(name = "idRecord") int idMedicalRecord, @WebParam(name = "idEPS") int idEPS)
     {
         EPS eps = new CRUD_EPS().readByID(idEPS);
         return new MedicalRecordCRUDUrl().getMR(idMedicalRecord, eps.getUrlRecords());
     }
     
+    @WebMethod(operationName = "updateMedicalRecord")
     public void updateMedicalRecord(@WebParam(name = "record") MedicalRecord mr,@WebParam(name = "idEPS") int idEPS)
     {
         EPS eps = new CRUD_EPS().readByID(idEPS);
         new MedicalRecordCRUDUrl().setMR(mr, eps.getUrlRecords());
     }
     
+    @WebMethod(operationName = "deleteMedicalRecord")
     public void deleteMedicalRecord(@WebParam(name = "idRecord") int idMedicalRecord, @WebParam(name = "idEPS") int idEPS)
     {
         EPS eps = new CRUD_EPS().readByID(idEPS);
         new MedicalRecordCRUDUrl().deleteMR(idMedicalRecord, eps.getUrlRecords());
     }
 
+    @WebMethod(operationName = "readAllMedicalRecord")
     public List<MedicalRecord> readAllMedicalRecord(@WebParam(name = "idEPS") int idEPS)
     {
         EPS eps = new CRUD_EPS().readByID(idEPS);
